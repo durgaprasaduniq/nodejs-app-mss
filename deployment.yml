@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: durgaprasaduniq/node:devops
+          image: durgaprasaduniq/gc:mine
           ports:
             - containerPort: 9981
 
