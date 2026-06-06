@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs
+  labels:
+    env: app
+    value: new
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      env: app
+      value: new
+  template:
+    metadata:
+      labels:
+        env: app
+        value: new
+    spec:
+      containers:
+        - name: nodejs-app
+          image: durgaprasaduniq/node:devops
+          ports:
+            - containerPort: 9981
+
